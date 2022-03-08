@@ -1,3 +1,8 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+
 class Question:
     """Question on a questionnaire."""
 
@@ -21,7 +26,12 @@ class Survey:
         self.title = title
         self.instructions = instructions
         self.questions = questions
+    
+    # def __str__(self):
+    #     return self.describe()
 
+    # def describe(self):
+    #     return f"Question: {self.questions}"
 
 satisfaction_survey = Survey(
     "Customer Satisfaction Survey",
